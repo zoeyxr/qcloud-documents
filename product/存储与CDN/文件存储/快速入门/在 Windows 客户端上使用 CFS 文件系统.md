@@ -1,3 +1,5 @@
+
+
 ## 简介
 
 本文为您详细介绍如何在 Windows 客户端上使用 CFS 文件系统。本指引以 Windows Server 2012 R2 为示例截图，其他版本操作系统，例如 Windows Server 2008 及 Windows Server 2016 操作方法相同。
@@ -122,8 +124,6 @@ mount 10.10.0.12:/z3r6k95r X:
 
 #### 通过图形界面挂载文件系统
 
-> !CIFS/SMB 协议文件系统公测中，更多信息请参阅 [CIFS/SMB公测说明](https://cloud.tencent.com/document/product/582/9553#cifs.2Fsmb-.E5.85.AC.E6.B5.8B.E8.AF.B4.E6.98.8E)。
-
 1. 打开 "映射网络驱动器"
    登录到需要挂载文件系统的 Windows 上，在 "开始" 菜单中找到 "计算机"，单击鼠标右键出现菜单，单击菜单中的 "映射网络驱动器"。 
    ![](https://main.qcloudimg.com/raw/515b5b21a19e3f3518c75441326e1800.png)
@@ -170,4 +170,8 @@ umount X：
 
 ## 步骤5: 终止资源
 
+>!文件系统删除后，资源不可恢复，建议您删除文件系统之前，先备份资源。
+
 您可以从腾讯云控制台终止文件系统。进入腾讯云 [文件存储控制台](https://console.cloud.tencent.com/cfs)，选中需要终止的文件系统，单击【删除】并【确认】，即可删除文件系统。
+
+

@@ -1,8 +1,10 @@
 ## 操作场景
-腾讯云容器服务开源版（Tencent Kubernetes Engine Stack，TKE Stack）是面向私有化环境的开源容器编排引擎。您可参考本文安装并创建容器服务开源版控制台，并通过控制台创建和管理容器集群，在集群内快速、弹性地部署服务。
+腾讯云容器服务开源版（Tencent Kubernetes Engine Stack，TKEStack）是腾讯内部多个团队联合打造的一款集强壮性和易用性于一身的企业级开源容器编排引擎。您可参考本文创建 TKEStack 控制台，并通过控制台创建和管理容器集群，在集群内快速、弹性地部署服务。如需了解更多信息，请查看 [TKEStack 产品手册](https://github.com/tkestack/tke/tree/master/docs/guide/zh-CN) 获取完整产品使用介绍。
+
 
 ## 前提条件
-已具备4个可用节点，详细配置见下表。本文均以操作系统为 CentOS 7.6 的腾讯云云服务器为例，节点创建请参见 [创建实例](https://tcloud-doc.isd.com/document/product/213/4855)。
+已具备4个可用节点，详细配置见下表。关于部署要求的更多信息请参见 [部署环境要求](https://github.com/tkestack/tke/blob/master/docs/guide/zh-CN/installation/installation-requirement.md)。
+本文均以操作系统为 CentOS 7.6 的腾讯云云服务器 CVM 为例，节点创建请参见 [创建实例](https://tcloud-doc.isd.com/document/product/213/4855)。
 
 <table>
 <tr>
@@ -38,7 +40,7 @@ version=vx.x.x && wget https://tke-release-1251707795.cos.ap-guangzhou.myqcloud.
 >- 例如，使用 v1.2.3 版本时进行安装时，则对应命令为 `version=v1.2.3`。您可查看 TKEStack [Release](https://github.com/tkestack/tke/releases) 按需选择版本进行安装，建议安装最新版本。
 >- tke-installer 约为5GB，包含安装所需资源，请确保节点具备足够空间。
 >
-3. 执行以下命令，安装 tke-installer。
+3. 执行以下命令，安装 tke-installer，请耐心等待安装完毕。
 ```
 ./tke-installer-x86_64-$version.run
 ```
@@ -80,7 +82,7 @@ http://xxx.xxx.xx.xx:8080/index.html
 	- **镜像仓库类型**：请按需设置，本文以【TKE提供】为例。
 		- **TKE提供**：使用 TKE 自带的镜像仓库。
 		- **第三方仓库**：已配置好的外部镜像仓库。若选择【第三方仓库】，TKEStack 将不会再安装镜像仓库，而是使用您提供的镜像仓库作为默认镜像仓库服务。
-5. 在“业务设置”页面，选择是否开启 TKEStack 控制台业务模块，建议开启。
+5. 在“业务设置”页面，选择是否开启 TKEStack 控制台业务模块，建议开启，并单击【下一步】。
 6. 在“监控设置”页面，参考以下提示进行设置，并单击【下一步】。如下图所示：
 ![](https://main.qcloudimg.com/raw/7236c01103b3fe9b02bc971b10e652b4.png)
 	- **监控存储类型**：请按需设置，本文以【TKE提供】为例。
@@ -244,5 +246,7 @@ http://xxx.xxx.xx.xx:8080/index.html
 2. 在“集群管理”页面中，选择需删除集群所在行右侧的【删除】。如下图所示：
 ![](https://main.qcloudimg.com/raw/44e326f84ad6ff929d10bf219905f492.png)
 3. 在弹出的“删除集群”窗口中，单击【确定】即可。
+>?如需了解更多信息，请查看 [TKEStack 产品手册](https://github.com/tkestack/tke/tree/master/docs/guide/zh-CN) 获取完整产品使用介绍。
+>
 
 
